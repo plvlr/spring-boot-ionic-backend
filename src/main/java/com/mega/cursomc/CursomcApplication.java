@@ -43,7 +43,6 @@ public class CursomcApplication implements CommandLineRunner {
 			
 			categoriaRepository.saveAll(Arrays.asList(cat1, cat2));			
 			produtoRepository.saveAll(Arrays.asList(p1, p2, p3));
-			// teste
 	}
 
 }
