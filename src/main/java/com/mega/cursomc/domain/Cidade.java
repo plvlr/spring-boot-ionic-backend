@@ -22,8 +22,6 @@ public class Cidade implements Serializable {
     public Cidade (){
     }
 
-
-
     public Integer getId() {
         return id;
     }
