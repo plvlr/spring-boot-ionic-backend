@@ -1,5 +1,6 @@
 package com.mega.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.mega.cursomc.domain.Pagamento;
 import com.mega.cursomc.domain.enums.EstadoPagamento;
 
@@ -10,7 +11,9 @@ import java.util.Date;
 public class PagamentoComBoleto extends Pagamento {
     private static final long serialVersionUID = 1L;
 
+    @JsonFormat(pattern = "dd/MM/aaaa")
     private Date dataVenciomento;
+    @JsonFormat(pattern = "dd/MM/aaaa")
     private Date dataPagamento;
 
     public PagamentoComBoleto() {
