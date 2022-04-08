@@ -1,7 +1,6 @@
 package com.mega.cursomc.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -20,11 +19,9 @@ public class Pedido implements Serializable {
     @JsonFormat(pattern = "dd/MM/aaaa hh:MM")
     private Date Instante;
 
-    @JsonManagedReference
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "pedido")
     private Pagamento pagamento;
 
-    @JsonManagedReference
     @ManyToOne
     @JoinColumn(name="cliente_id")
     private Cliente cliente;

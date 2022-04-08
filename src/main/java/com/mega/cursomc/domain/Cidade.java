@@ -1,7 +1,6 @@
 package com.mega.cursomc.domain;
 
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
@@ -18,7 +17,6 @@ public class Cidade implements Serializable {
     private Integer id;
     private String nome;
 
-    @JsonManagedReference
     @ManyToOne
     @JoinColumn(name="estado_id")
     private Estado estado;
